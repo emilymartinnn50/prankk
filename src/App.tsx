@@ -61,7 +61,9 @@ export default function App() {
   const handleAdminAccess = () => {
     const newCount = adminClicks + 1;
     setAdminClicks(newCount);
+    console.log("[v0] Admin clicks:", newCount);
     if (newCount >= 5) {
+      console.log("[v0] Admin panel unlocked!");
       setStep('admin');
       fetchSubmissions();
       setAdminClicks(0);
