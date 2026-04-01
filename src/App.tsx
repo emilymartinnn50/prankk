@@ -125,7 +125,7 @@ export default function App() {
               </h2>
               
               <p className="text-slate-600 mb-4 sm:mb-6 text-xs sm:text-sm leading-relaxed">
-                Due to unforeseen structural maintenance and administrative upgrades, the University will remain closed for all students for a period of <span className="font-bold text-red-600">2 weeks</span> starting from tomorrow.
+                Due to unforeseen structural maintenance and administrative upgrades, the University will remain closed for all students for a period of <span className="font-bold text-red-600">2 weeks</span> starting from....
               </p>
 
               <div className="bg-slate-100 p-3 sm:p-4 rounded-lg mb-6 sm:mb-8 border-l-4 border-red-500">
@@ -148,7 +148,7 @@ export default function App() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] sm:text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Roll Number</label>
+                  <label className="block text-[10px] sm:text-xs font-bold text-slate-500 uppercase mb-1 ml-1">Roll No/Contact Number</label>
                   <input
                     required
                     type="text"
