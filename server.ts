@@ -2,12 +2,14 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import fs from "fs";
+import cors from "cors";
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
 
   app.use(express.json());
+  app.use(cors());
 
   // API route to collect submissions
   app.post("/api/submit", (req, res) => {
@@ -90,6 +92,11 @@ async function startServer() {
       appType: "spa",
     });
     app.use(vite.middlewares);
+    
+    // Fallback to index.html for SPA routing
+    app.get("*", (req, res) => {
+      res.redirect("/");
+    });
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
